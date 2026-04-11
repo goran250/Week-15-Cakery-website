@@ -286,7 +286,7 @@ label {
 
 .contact-form {
   display: grid;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .section-products {
@@ -364,6 +364,11 @@ footer.site-footer {
     gap: 1.1rem;
     width: 335px;
     margin-right: 0;
+  }
+  .contact-form .button-primary {
+    margin: 0 auto;
+    max-width: 350px;
+    width: 100%;
   }
 }
 
