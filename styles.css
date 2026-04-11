@@ -145,6 +145,10 @@ h1, h2 {
   color: var(--text);
 }
 
+.contact-details h3 {
+  margin: 30px 0 0px!important
+}
+
 .hero-copy h1 {
   font-size: clamp(2.4rem, 4vw, 4rem);
   line-height: 1.05;
@@ -252,13 +256,17 @@ h1, h2 {
 .newsletter-card {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
+  gap: 1rem 2rem;
   align-items: center;
 }
 
 .newsletter-form {
   display: grid;
   gap: 1rem;
+}
+
+.newsletter-form label {
+  margin-top: 0;
 }
 
 input,
