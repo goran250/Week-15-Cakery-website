@@ -1,0 +1,22 @@
+sequenceDiagram
+    actor User
+    participant Products as products.html
+    participant Ordering as ordering.html
+    participant JavaScript as javascript.js
+    participant DOM as Browser DOM
+    
+    User->>Products: Browse products
+    User->>Products: Click "Beställ" button
+    Products->>Ordering: Navigate with URL params<br/>(product, price)
+    
+    Ordering->>JavaScript: onload event triggered
+    activate JavaScript
+    JavaScript->>JavaScript: getQueryString()
+    JavaScript->>JavaScript: Parse URLSearchParams
+    note over JavaScript: Extract product & price<br/>from URL query string
+    deactivate JavaScript
+    
+    JavaScript->>DOM: getElementById("message")
+    JavaScript->>DOM: Update innerHTML with<br/>product + price
+    
+    DOM->>User: Display order confirmation<br/>with product details
